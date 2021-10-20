@@ -2,41 +2,48 @@
 <html lang="en" dir="ltr">
   <head>
     <link
-      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto"
-      rel="stylesheet"
-    />
-    <link href="static/css/myCss.css" rel="stylesheet" />
-    <link href="static/css/bootstrap.min.css" rel="stylesheet" media="screen" />
-    <link href="static/css/customIndex.css" rel="stylesheet" />
-    <link href="static/css/bootstrap-responsive.css" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="First HTML Program" />
-    <title>Nebula.com</title>
-    <link rel="stylesheet" href="Templates/styles.css">
-    
+  href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+  rel="stylesheet"
+/>
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
+<link href="static/css/myCss.css" rel="stylesheet" />
+<link href="static/css/bootstrap.min.css" rel="stylesheet" media="screen" />
+<link href="static/css/customIndex.css" rel="stylesheet" />
+<link href="static/css/bootstrap-responsive.css" rel="stylesheet" />
+<link
+  rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+  integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+  crossorigin="anonymous"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="First HTML Program" />
+<title>Nebula.com</title>
+<link rel="stylesheet" href="Templates/styles.css" />
+
+<div id="nav"></div>
+<script>
+  $(function () {
+    $("#nav").load("Templates/navbar.html");
+  });
+</script>
+
+<div id="sidebar"></div>
+<script>
+  $(function () {
+    $("#sidebar").load("Templates/sidebar.html");
+  });
+</script>
   </head>
  <body>
 
-    <div id="nav"></div>
-    <script>$(function(){$("#nav").load("Templates/navbar.html");});</script>
-  
-    <div id="sidebar"></div>
-    <script>$(function(){$("#sidebar").load("Templates/sidebar.html");});</script>
-    
     <section class="home-section">
       <!-- <div class="text">Dashboard</div> -->
       <!-- <em class="Padding"></em> -->

@@ -11,7 +11,10 @@
 html,
 body {
   color: black;
+  background-image: url("../images/Bkgrd2.png");
+  /* background-repeat: no-repeat; */
 }
+
 /* #region Nav Bar */
 nav {
   position: relative;
@@ -55,9 +58,10 @@ em.desc {
 }
 
 em.Link {
-  color: rgb(247, 8, 8);
+  color: yellow;
   font-style: bold;
   font-size: 25px;
+  font-weight: 600px;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   margin-left: 500px;
   margin-bottom: 0px;
@@ -122,9 +126,9 @@ hr {
 .home-section {
   position: relative;
   background: #e4e9f7;
-  background-image: url("../../images/Bkgrd2.png");
   background-size: contain;
   min-height: 100vh;
+  background-image: url("../../images/Bkgrd2.png");
   top: 0;
   left: 0;
   width: 100%;
