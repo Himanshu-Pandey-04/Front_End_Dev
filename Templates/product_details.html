@@ -22,6 +22,10 @@
     margin: 0px 12px;
   }
 
+  .product-name {
+    font-size: 30px;
+  }
+
   .product-name i:hover {
     color: #ff6d39;
     cursor: pointer;
@@ -151,7 +155,7 @@
     margin-top: 20px;
     margin-right: 50px;
     font-weight: 500;
-    font-size: 11px;
+    font-size: 13px;
     float: left;
     transition: 0.3s all ease;
   }
@@ -192,8 +196,9 @@
   .card {
     display: flex;
     align-items: center;
-    background: #252831
-      url(https://www.dropbox.com/s/fuadz3vmw2nsylm/bg.png?raw=1) no-repeat;
+    background-color: indigo;
+    /* background: #252831
+      url(https://www.dropbox.com/s/fuadz3vmw2nsylm/bg.png?raw=1) no-repeat; */
     height: 600px;
     width: 800px;
     margin: 0 auto;
@@ -235,6 +240,22 @@
     width: 305px;
     z-index: 10;
   }
+
+  table tr td {
+    background-color: white;
+    border-width: 1px solid black;
+    margin-top: 20px;
+    padding-top: 50px;
+  }
+
+  td {
+    width: 50%;
+  }
+
+  td:nth-child(odd) {
+    background-color: rgb(207, 207, 207);
+  }
+
 </style>
 <div class="card">
   <div class="left">
@@ -249,9 +270,6 @@
     <div class="product-info">
       <div class="product-name">
         <h1>Airmax</h1>
-        <i class="fa fa-search"></i>
-        <i class="fa fa-user"></i>
-        <i class="fa fa-shopping-cart"></i>
       </div>
       <div class="details">
         <h3>Winter Collection</h3>
@@ -277,4 +295,22 @@
       <span class="foot"><i class="fa fa-shopping-cart"></i>Add To Cart</span>
     </div>
   </div>
+</div>
+
+
+<div class="container">
+  <table class="table">
+    <tr>
+      <td>OS</td>
+      <td>Android</td>
+    </tr>
+    <tr>
+      <td>RAM</td>
+      <td>6 GB</td>
+    </tr>
+    <tr>
+      <td>Batteries</td>
+      <td>1 lithium Polymer batteries required.</td>
+    </tr>
+  </table>
 </div>
