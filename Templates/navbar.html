@@ -20,19 +20,28 @@
     /* border-radius: 30px; */
   }
 
+  .menu .btn {
+    display: inline-flex;
+  }
+  .menu .btn i#one {
+    padding-top: 5px;
+    font-size: 2.6ch;
+    color: blueviolet;
+    transform: rotate(335deg);
+  }
+
+  .menu .btn i#two {
+    padding-top: 5px;
+    font-size: 1.8ch;
+    color: blueviolet;
+    transform: rotate(30deg);
+  }
+
   .menu .btn a {
     position: relative;
     display: block;
     height: 32px;
     width: 110px;
-    color: linear-gradient(
-      115deg,
-      #4fcf70,
-      #fad648,
-      #a767e5,
-      #12bcfe,
-      #44ce7b
-    );
     text-align: center;
     border-radius: 15px;
   }
@@ -50,6 +59,7 @@
     line-height: 30px;
     color: #f5f5f5;
     font-size: 20px;
+    font-weight: 600;
   }
 
   .btn a:hover {
@@ -72,13 +82,12 @@
     height: 27px;
     width: 450px;
     align-items: center;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(65, 65, 65);
     border-radius: 10px;
   }
 
   nav .menu .search:hover {
-    background-color:rgb(65, 65, 65);
-    color:rgb(255, 255, 255);
+    background-color:rgb(110, 110, 110);
   }
 
   nav .menu .search input {
@@ -164,6 +173,8 @@
 <nav>
   <div class="menu">
     <div class="btn">
+      <i class="fa fa-gift" id="one"></i>
+      <i class="fa fa-gift" id="two"></i>
       <a href="../home.html" onclick="location.reload()"><span>Euphoria</span></a>
     </div>
   
@@ -172,12 +183,6 @@
         <input type="text" placeholder="Search..." />
         <button type="submit"><i class="fa fa-search"></i></button></li>
       </div>
-
-      <!-- <li>
-        <i class="bx bx-search"></i>
-        <input type="text" placeholder="Search..." /> -->
-        <!-- <span class="searcher">Search</span> -->
-      <!-- </li> -->
 
       <li><a href="../home.html">Home</a></li>
       <li><a href="#">Options</a></li>
