@@ -85,7 +85,7 @@
     background-color: rgb(65, 65, 65);
     border-radius: 10px;
   }
-
+  
   nav .menu .search:hover {
     background-color:rgb(110, 110, 110);
   }
@@ -94,12 +94,12 @@
     height: 95%;
     width: 92%;
     float: left;
-    padding: 0 10px;
+    padding: 0 2ch;
     border: 2px;
     border-color:white;
     margin-top: 0px;
     margin-right: 0px;
-    font-size: 20px;
+    font-size: 2ch;
     font-weight: 400;
     color:rgb(255, 255, 255);
     border-radius: 15px 0px 0px 15px;
@@ -107,7 +107,11 @@
     transition: all 0.5s ease;
     background: transparent;
   }
-
+  
+    nav .menu .search input::placeholder {
+      color: rgb(255, 255, 255);
+    }
+  
 
   nav .menu .search button {
     height: 100%;

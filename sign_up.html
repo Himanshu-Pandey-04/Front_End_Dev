@@ -28,7 +28,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="First HTML Program" />
-    <title>Euphoria • Sign up</title>
+    <title>Sign up • Euphoria</title>
     <link rel="stylesheet" href="/Templates/styles.css" />
     <style>
       body {
@@ -119,6 +119,7 @@
           font-weight: 400;
           font-size: 1.3ch;
           color: red;
+          display: none;
       }
 
       .name,
@@ -306,6 +307,7 @@
         background-color: rgb(235, 235, 235);
         height: 100%;
         border-radius: 3px;
+        border: 0.2ch groove cyan;
       }
 
       .submit {
@@ -329,10 +331,10 @@
   <div class="bkgrd">
     <h1 class="company-name">Euphoria</h1>
     <p class="about">Sign up to explore, buy, sell all sorts of products</p>
-    <form class="sign-up-form" , method="POST">
+    <form class="sign-up-form", method="POST" onsubmit="location.href = is_Valid_SignUp()">
       <div class="name">
         <label class="field-name">Name</label>
-        <input type="text" placeholder="Full Name" />
+        <input type="text" placeholder="Full Name" id="fname"/>
         <label class="message">Invalid characters in Name</label>
       </div>
       <div class="email">
@@ -2405,12 +2407,35 @@
       </div>
       <div class="password">
           <label class="field-name">Password</label>
-        <input type="password" placeholder="At least 8 characters" />
-        <label class="message">Password length must be in range 8-30 characters</label>
+        <input type="password" placeholder="At least 8 characters" id="password1" />
+        <label class="message" id="pswrdMessage1">Password length must be in range 8-30 characters</label>
+      </div>
+      <div class="password">
+          <label class="field-name">Re-enter Password</label>
+        <input type="password" id="password2"/>
+        <label class="message" id="pswrdMessage2">Password didn't match</label>
       </div>
       <div class="submit">
-        <button class="sign-up">Sign Up</button>
+        <button class="sign-up" type="submit">Sign Up</button> <!--onclick="is_Valid_SignUp()"  onclick="location.href = 'home.html'"-->
       </div>
     </form>
   </div>
+
+
+  <script>
+      const is_Valid_SignUp = () => {
+          const inputs = document.getElementsByTagName('input');
+          const pswrd1 = document.getElementById('password1').value;
+          const pswrd2 = document.getElementById('password2').value;
+          document.getElementById('fname').value = pswrd1 + " " + pswrd2;
+          
+          if(pswrd1 != pswrd2) {
+            document.getElementById("pswrdMessage2").style.display = 'block';
+            return location.href;
+          }
+          else {
+            return 'home.html';
+          }
+      }
+  </script>
 </body>
