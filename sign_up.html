@@ -43,10 +43,10 @@
         display: block;
         justify-content: center;
         align-items: center;
-        margin: 5%;
+        margin: 2% 5% 5% 5%;
         background-color: rgb(255, 255, 255);
         border: 0.2ch white solid;
-        padding: 3ch;
+        padding: 0ch 3ch 3ch 3ch;
         min-width: 30ch;
         width: 43ch;
         max-width: 50ch;
@@ -82,6 +82,36 @@
       .bkgrd:nth-child(1)::before,
       .bkgrd:nth-child(1)::after {
         background: linear-gradient(0deg, #00ff2a, #772aff, red, #00ffff);
+      }
+
+      .controls {
+        display: inline-flex;
+        align-items: center;
+        width: 100%;
+        padding: 2px;
+        border-radius: 2ch;
+        background-color: inherit;
+      }
+
+      .controls a {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 1px;
+        text-decoration: none;
+      }
+
+      .controls a i {
+        color: rgb(0, 0, 0);
+        font-size: 2.5ch;
+        font-weight: 800;
+        border: none;
+        margin: 0.3ch 2ch 0 1ch;
+        cursor: pointer;
+      }
+
+      .controls a:hover i {
+        color: rgb(224, 0, 0);
       }
 
       .company-name {
@@ -307,7 +337,7 @@
         background-color: rgb(235, 235, 235);
         height: 100%;
         border-radius: 3px;
-        border: 0.2ch groove cyan;
+        border: 0.2ch groove rgb(0, 0, 0);
       }
 
       .submit {
@@ -329,6 +359,9 @@
 
 <body>
   <div class="bkgrd">
+    <div class="controls">
+      <a class="back" href="/home.html"><i class="fa fa-arrow-left"></i></a>
+    </div>
     <h1 class="company-name">Euphoria</h1>
     <p class="about">Sign up to explore, buy, sell all sorts of products</p>
     <form class="sign-up-form", method="POST" onsubmit="location.href = is_Valid_SignUp()">
@@ -2401,7 +2434,7 @@
             </span>
             </span>
         
-            <input type="tel"/>
+            <input type="tel" id="phone-main"/>
         </div>
         <label class="message">Phone Number is Invalid</label>
       </div>
@@ -2425,10 +2458,17 @@
   <script>
       const is_Valid_SignUp = () => {
           const inputs = document.getElementsByTagName('input');
+          const phone = document.getElementById('phone-main');
           const pswrd1 = document.getElementById('password1').value;
           const pswrd2 = document.getElementById('password2').value;
           document.getElementById('fname').value = pswrd1 + " " + pswrd2;
           
+          if(phone.value.length == 0)
+          {
+            alert("Looks like you haven't entered your phone number, this can create problem while purchasing!");
+            return false;
+          }
+
           if(pswrd1 != pswrd2) {
             document.getElementById("pswrdMessage2").style.display = 'block';
             return location.href;
